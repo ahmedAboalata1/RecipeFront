@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="">
+            <div class="brdr w-25"></div>
+                <h4>Welcometo</h4>
+                <h1>Recipe</h1>
+                <h3>Application</h3>
+            <div class="brdr w-100"></div>
+        </div>
+    </div>
+    <div *ngFor="let recipe of recipes" class="m-1 rounded-3">
+        <div class="">
+            <p-card header={{recipe.name}} subheader="Card Subheader" [style]="{width: '360px' }" styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <img src="../../../../assets/{{recipe.image}}" alt="">
+                </ng-template>
+                    <ng-template pTemplate="footer">
+                    <p-button label="Details"g></p-button>
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+</div>

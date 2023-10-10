@@ -1,8 +1,24 @@
-<!-- <h1>Registrtion</h1>
-<form action=""[formGroup]="registerForm">
-    <div class="form-group">
-        <label for="username">Username: </label>
-        <input type="text" formControl="Email">
-        <span>email not valid </span>
+<h1>Registrtion</h1>
+<form [formGroup]="registerForm" (ngSubmit)="registerAccount()">
+    <div  class="form-group my-2">
+        <label for="email">Email</label>
+        <input class="form-control" type="email" formControlName="email">
+        <span *ngIf="registerForm.get('email')?.invalid &&(registerForm.get('email')?.dirty || registerForm.get('email')?.touched)" class="text-danger">Email not valid </span>
     </div>
-</form> -->
+    <div class="form-group my-2">
+        <label for="DisplayName">User Name</label>
+        <input class="form-control" type="text" formControlName="DisplayName">
+        <span *ngIf="registerForm.get('DisplayName')?.invalid &&(registerForm.get('DisplayName')?.dirty || registerForm.get('DisplayName')?.touched)" class="text-danger">User Name not valid </span>
+    </div>
+    <div class="form-group my-2">
+        <label for="PhoneNumber">Phone Number</label>
+        <input class="form-control" type="text" formControlName="PhoneNumber">
+        <span *ngIf="registerForm.get('PhoneNumber')?.invalid &&(registerForm.get('PhoneNumber')?.dirty || registerForm.get('PhoneNumber')?.touched)" class="text-danger">Phne Number not valid </span>
+    </div>
+    <div class="form-group my-2">
+        <label for="Password">Password</label>
+        <input class="form-control" type="password" formControlName="Password">
+        <span *ngIf="registerForm.get('Password')?.invalid &&(registerForm.get('Password')?.dirty || registerForm.get('Password')?.touched)" class="text-danger">Password not valid </span>
+    </div>
+    <button  [disabled]="registerForm.invalid" type="submit" class="btn btn-info">Register</button>
+</form>

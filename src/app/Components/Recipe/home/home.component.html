@@ -10,7 +10,7 @@
     </div>
     <div *ngFor="let recipe of recipes" class="m-1 rounded-3">
         <div class="">
-            <p-card header={{recipe.name}} subheader="Card Subheader" [style]="{width: '360px' }" styleClass="p-card-shadow">
+            <p-card header={{recipe.name}} subheader="Card Subheader" [style]="{width:'360px'}" styleClass="p-card-shadow">
                 <ng-template pTemplate="header">
                     <img src="../../../../assets/{{recipe.image}}" alt="">
                 </ng-template>

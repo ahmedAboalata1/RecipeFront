@@ -9,12 +9,14 @@ import { NavbarComponent } from './Components/Shared/navbar/navbar.component';
 import { FooterComponent } from './Components/Shared/footer/footer.component';
 import { HomeComponent } from './Components/Recipe/home/home.component';
 import { NotFoudComponent } from './Components/Shared/not-foud/not-foud.component';
+
 import { HttpClientModule} from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { CardModule } from 'primeng/card';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { CardModule } from 'primeng/card';
     ButtonModule,
     InputTextModule,
     TableModule,
-    CardModule
+    CardModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

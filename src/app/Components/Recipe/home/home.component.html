@@ -15,9 +15,10 @@
                     <img src="../../../../assets/{{recipe.image}}" alt={{recipe.image}}>
                 </ng-template>
                 <ng-template pTemplate="footer">
-                    <p-button label="Details"g ></p-button>
+                    <a routerLink="/details/{{recipe.id}}" class="btn btn-primary">Details</a>
                 </ng-template>
             </p-card>
+            
         </div>
     </div>
 </div>

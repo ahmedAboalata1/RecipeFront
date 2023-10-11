@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DatailsComponent } from './datails.component';
+import { DetailsComponent } from './details.component';
 
-describe('DatailsComponent', () => {
-  let component: DatailsComponent;
-  let fixture: ComponentFixture<DatailsComponent>;
+describe('DetailsComponent', () => {
+  let component: DetailsComponent;
+  let fixture: ComponentFixture<DetailsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DatailsComponent]
+      declarations: [DetailsComponent]
     });
-    fixture = TestBed.createComponent(DatailsComponent);
+    fixture = TestBed.createComponent(DetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

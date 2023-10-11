@@ -17,6 +17,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
+import { DatailsComponent } from './Components/Recipe/datails/datails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    NotFoudComponent
+    NotFoudComponent,
+    DatailsComponent
   ],
   imports: [
     BrowserModule,

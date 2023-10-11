@@ -14,7 +14,7 @@ export class RecipeService {
     return this.http.get(this.baseUrl+`Recipe/GetAll`)  ;
   }
   getRecipeById(id:Number):Observable<any>{
-    return  this.http.get(this.baseUrl);
+    return  this.http.get(this.baseUrl+`Recipe/Get/${id}`); 
   }
   // postRecipe(recipe:Recipe){
   //   return  this.http.post(`http://localhost:3000`);

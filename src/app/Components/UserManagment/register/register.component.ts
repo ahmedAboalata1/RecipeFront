@@ -10,16 +10,23 @@ import { AuthService } from 'src/app/Services/auth.service';
 })
 export class RegisterComponent {
   constructor(private AuthService:AuthService, private router:Router){}
-registerForm:FormGroup=new FormGroup({
- 'email' :new FormControl(null,[Validators.required,Validators.email]),
- 'DisplayName' :new FormControl(null,[Validators.required , Validators.minLength(4)]),
- 'PhoneNumber' :new FormControl(null,[Validators.required]),
- 'Password' :new FormControl(null,[Validators.required,Validators.pattern(/^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,}$/)])
-});
+  registerForm:FormGroup=new FormGroup({
+  'email' :new FormControl(null,[Validators.required,Validators.email]),
+  'DisplayName' :new FormControl(null,[Validators.required , Validators.minLength(4)]),
+  'PhoneNumber' :new FormControl(null,[Validators.required]),
+  'Password' :new FormControl(null,[Validators.required,Validators.pattern(/^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,}$/)])
+  });
 
-registerAccount(){
-  this.AuthService.regestirNewUser(this.registerForm.value).subscribe((data)=>{
-    console.log(data.message);
-  })
-}
+  registerAccount()
+  {
+    if(this.registerForm.invalid)
+    {
+      return;
+    }
+    this.AuthService.regestirNewUser(this.registerForm.value).subscribe((data)=>{
+      console.log(data)
+       this.router.navigateByUrl('/login')
+    })
+    
+  }
 }

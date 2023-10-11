@@ -16,7 +16,9 @@ constructor(private AuthService:AuthService, private router:Router){}
   loginAccount()
   {
    this.AuthService.login(this.loginForm.value).subscribe((data)=>{
-     console.log(data.message);
+    console.log(data)
+    localStorage.setItem("token",data.token)
+     this.router.navigateByUrl('/home')
    })
   }
 }

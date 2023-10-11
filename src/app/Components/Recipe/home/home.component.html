@@ -12,10 +12,10 @@
         <div class="">
             <p-card header={{recipe.name}} subheader="Card Subheader" [style]="{width:'360px'}" styleClass="p-card-shadow">
                 <ng-template pTemplate="header">
-                    <img src="../../../../assets/{{recipe.image}}" alt="">
+                    <img src="../../../../assets/{{recipe.image}}" alt={{recipe.image}}>
                 </ng-template>
-                    <ng-template pTemplate="footer">
-                    <p-button label="Details"g></p-button>
+                <ng-template pTemplate="footer">
+                    <p-button label="Details"g ></p-button>
                 </ng-template>
             </p-card>
         </div>

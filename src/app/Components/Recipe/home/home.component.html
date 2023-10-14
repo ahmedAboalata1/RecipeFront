@@ -1,3 +1,6 @@
+<div>
+    <input [(ngModel)]="searchvalue" placeholder="search" type="text"  class="form-control w-50 m-auto bg-transparent">
+</div>
 <div class="row">
     <div class="col-md-4">
         <div class="">
@@ -8,7 +11,7 @@
             <div class="brdr w-100"></div>
         </div>
     </div>
-    <div *ngFor="let recipe of recipes" class="m-1 rounded-3">
+    <div *ngFor="let recipe of recipes|searchPipe:searchvalue" class="m-1 rounded-3">
         <div class="">
             <p-card header={{recipe.name}} subheader="Card Subheader" [style]="{width:'360px'}" styleClass="p-card-shadow">
                 <ng-template pTemplate="header">

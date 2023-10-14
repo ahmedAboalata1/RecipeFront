@@ -8,6 +8,7 @@ import { CardModule } from 'primeng/card'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit  {
+  searchvalue :any=""
   recipes:Recipe[]=[];
 constructor(private recipeservice:RecipeService ,){ }
 

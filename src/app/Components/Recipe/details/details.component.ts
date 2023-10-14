@@ -1,7 +1,6 @@
 import { Component ,OnInit} from '@angular/core';
-
+import { RatingModule } from 'primeng/rating';
 import { ActivatedRoute } from '@angular/router';
-import { Recipe } from 'src/app/Models/Recipe';
 import { RecipeService } from 'src/app/Services/recipe.service';
 @Component({
   selector: 'app-details',
@@ -11,6 +10,7 @@ import { RecipeService } from 'src/app/Services/recipe.service';
 export class DetailsComponent {
   id:any;
   recipe:any;
+  value:number=5;
   constructor(private _activtaterouter:ActivatedRoute, private recipeservice:RecipeService){
     this.id =_activtaterouter.snapshot.paramMap.get('id');
   }

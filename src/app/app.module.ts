@@ -18,6 +18,8 @@ import { TableModule } from 'primeng/table';
 import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './Components/Recipe/details/details.component';
+import { PipetestsPipe } from './Pipes/pipetests.pipe';
+import { SearchPipePipe } from './Pipes/search-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,9 @@ import { DetailsComponent } from './Components/Recipe/details/details.component'
     FooterComponent,
     HomeComponent,
     NotFoudComponent,
-    DetailsComponent
+    DetailsComponent,
+    PipetestsPipe,
+    SearchPipePipe
   ],
   imports: [
     BrowserModule,
